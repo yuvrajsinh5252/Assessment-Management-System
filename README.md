@@ -72,15 +72,6 @@ The provided assessment fixtures are available in `backend/data/assessments.js`.
 4. Use one of the sample session identifiers (e.g. `session_001`).
 5. Press "Generate PDF report" and verify that a PDF appears in `backend/reports/`.
 
-## Video demo checklist
-
-When recording the submission video, cover the following:
-
-- Signup → login journey in the UI
-- Issuing a report generation request from the dashboard
-- Locating the generated PDF on disk and opening it
-- Optional: editing `reportConfig.js` to showcase how a new field/section appears without code changes
-
 ## License
 
 MIT

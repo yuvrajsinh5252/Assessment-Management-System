@@ -1,8 +1,8 @@
-const jwt = require('jsonwebtoken');
-const { createUser, validateUser } = require('../services/userService');
+const jwt = require("jsonwebtoken");
+const { createUser, validateUser } = require("../services/userService");
 
-const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key';
-const TOKEN_EXPIRY = '2h';
+const JWT_SECRET = process.env.JWT_SECRET || "super-secret-key";
+const TOKEN_EXPIRY = "2h";
 
 function createToken(user) {
   return jwt.sign(
@@ -20,7 +20,9 @@ async function signup(req, res) {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
-      return res.status(400).json({ message: 'Name, email, and password are required.' });
+      return res
+        .status(400)
+        .json({ message: "Name, email, and password are required." });
     }
 
     const user = await createUser({ name, email, password });
@@ -36,7 +38,9 @@ async function login(req, res) {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
-      return res.status(400).json({ message: 'Email and password are required.' });
+      return res
+        .status(400)
+        .json({ message: "Email and password are required." });
     }
 
     const user = await validateUser({ email, password });
