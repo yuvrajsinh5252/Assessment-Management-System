@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log*
+.DS_Store
+backend/reports
+backend/data/users.json
+backend/data/users.json.backup
+frontend/dist
+.env
+backend/.env
+frontend/.env
